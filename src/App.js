@@ -1,5 +1,5 @@
 import React from "react";
-//import "./App.css"; some comment
+//import "./App.css";
 import List from "./List";
 import "bootstrap/dist/css/bootstrap.css";
 
