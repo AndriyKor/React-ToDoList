@@ -1,6 +1,6 @@
 import React from "react";
 
-function List(props) {
+const List = props => {
   return props.items.length > 0 ? (
     <table className="table table-striped">
       <thead>
@@ -30,6 +30,6 @@ function List(props) {
   ) : (
     <h4>The list is empty</h4>
   );
-}
+};
 
 export default List;

@@ -1,6 +1,7 @@
 import React from "react";
 //import "./App.css";
-import List from "./List";
+import List from "./components/List.jsx";
+import InputHeader from "./components/Input.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 
 class App extends React.Component {
@@ -58,23 +59,13 @@ class App extends React.Component {
         <h1>This is ToDo list</h1>
         <div className="row">
           <div className="col">
-            <div className="input-group mb-3">
-              <input
-                className="form-control"
-                placeholder="Enter item here"
-                value={this.state.value}
-                onChange={this.handleChange}
-              />
-              <div className="input-group-append">
-                <button
-                  className="btn btn-outline-secondary"
-                  type="button"
-                  onClick={this.handleClick}
-                >
-                  Add Item
-                </button>
-              </div>
-            </div>
+            <InputHeader
+              value={this.state.value}
+              placeholder="Enter item here"
+              buttonText="Add Item"
+              onClick={this.handleClick}
+              onChange={this.handleChange}
+            />
             <List items={this.state.items} handleDelete={this.handleDelete} />
           </div>
         </div>
