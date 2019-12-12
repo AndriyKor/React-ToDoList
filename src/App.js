@@ -2,7 +2,8 @@ import React from "react";
 //import "./App.css";
 import List from "./components/List.jsx";
 import InputHeader from "./components/Input.jsx";
-import "bootstrap/dist/css/bootstrap.css";
+//import "bootstrap/dist/css/bootstrap.css";
+import "./scss/App.scss";
 
 class App extends React.Component {
   constructor(props) {

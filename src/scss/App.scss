@@ -1,0 +1,164 @@
+// @use 'colors.scss';
+
+$colorDefault: #fff;
+$btnHoverColor: #6c757d;
+$btnDangerHoverColor: #bd2130;
+$btnDangerColor: #dc3545;
+
+%widthDefault {
+  width: 100%;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: #212529;
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  height: 365px;
+  line-height: 24px;
+  margin: 0;
+  text-align: left;
+  width: 1920px;
+}
+
+.container {
+  @extend %widthDefault;
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin-left: 200px;
+  margin-right: auto;
+}
+
+.input-group {
+  @extend %widthDefault;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.form-control {
+  @extend %widthDefault;
+  display: block;
+  height: calc(0.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  //font-weight: 400;
+  //line-height: 1.5;
+  color: #495057;
+  background-color: $colorDefault;
+  //background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  flex: 1 1;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.input-group-append {
+  margin-left: -1px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  cursor: pointer;
+  transition: none;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  user-select: none;
+  display: inline-block;
+  font-weight: 400;
+}
+
+.btn:hover {
+  color: $colorDefault;
+  background-color: $btnHoverColor;
+  border-color: $btnHoverColor;
+  text-decoration: none;
+}
+
+.btn-danger {
+  color: $colorDefault;
+  background-color: $btnDangerColor;
+  border-color: $btnDangerColor;
+}
+
+.btn-danger:hover {
+  color: $colorDefault;
+  background-color: $btnDangerHoverColor;
+  border-color: $btnDangerHoverColor;
+}
+
+.table {
+  @extend %widthDefault;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  text-align: inherit;
+  display: table-cell;
+  font-weight: bold;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
